@@ -8,6 +8,7 @@ class Person:
 
 
 def create_person_list(people: list) -> list:
+    Person.people.clear()
     persons = [Person(pers["name"], pers["age"]) for pers in people]
     for pers in people:
         obj = Person.people[pers["name"]]
